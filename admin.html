@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  
+	<meta name="viewport" content="width=device-width">
+
+	<title>TWIST: Home</title>
+
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	
+	<script src="script.js"></script>
+
+</head>
+
+<body>
+
+  <div class="header">
+    <center>
+  <h1>Teen Women in Science and Technology</h1>
+    </center>
+
+<ul>
+<center> 
+<a href='/'><button class="button">Home</button></a>   
+<a href='/reg'><button class="button">Register</button></a> <!-- use / for home and make a name for any other pages after the /-->
+<a href='/geninfo'><button class="button">General Information</button></a>
+<a href='/speakers'><button class="button">Speakers</button></a>
+<a href='/admin'><button class="button">Admin</button></a>
+</center>
+  </div>
+</ul>
+
+<h2>Create New Session</h2>
+
+<form action="/create_session" method="POST">
+
+  <input type="number" name="session" placeholder="Session ID#" required><br>
+
+  <input type="number" name="time" placeholder="Time" required><br>
+
+  <input type="number" name="room" placeholder="Room #" required><br>
+
+  <input type="text" name="presenter" placeholder="Presenter" required><br><br>
+
+  <input type="checkbox" name="subject" value="Programming">
+  <label for="Programming">Programming </label><br>
+
+  <input type="checkbox" name="subject" value="Geology">
+  <label for="Geology">Geology </label><br>
+
+  <input type="checkbox" name="subject" value="Math">
+  <label for="Math">Math </label><br>
+
+  <input type="checkbox" name="subject" value="Tech">
+  <label for="Tech">Tech </label><br>
+
+  <input type="checkbox" name="subject" value="Biology">
+  <label for="Biology">Biology </label><br>
+
+  <input type="checkbox" name="subject" value="Cyber Security">
+  <label for="Cyber Security">Cyber Security </label><br>
+
+  <input type="checkbox" name="subject" value="Machine Learning">
+  <label for="Machine learning">Machine learning </label><br>
+
+  <input type="checkbox" name="subject" value="UAV">
+  <label for="UAV">UAV </label><br>
+
+  <input type="checkbox" name="subject" value="Web Design">
+  <label for="Web Design">Web Design </label><br><br>
+  
+  <input type="submit" value="Submit" >
+
+</form>
+
+<br>
+
+<h2>Find Session</h2>
+
+<form action="/search" method="GET" >
+
+  <input type="number" name="id" placeholder="Session ID#" required><br>
+
+  <!-- <input type="number" name="time" placeholder="Time" ><br>
+
+  <input type="number" name="room" placeholder="Room #" ><br>
+
+  <input type="text" name="presenter" placeholder="Presenter"><br><br>
+
+  <input type="checkbox" name="subject" value="Programming">
+  <label for="Programming">Programming </label><br>
+
+  <input type="checkbox" name="subject" value="Geology">
+  <label for="Geology">Geology </label><br>
+
+  <input type="checkbox" name="subject" value="Math">
+  <label for="Math">Math </label><br>
+
+  <input type="checkbox" name="subject" value="Tech">
+  <label for="Tech">Tech </label><br>
+
+  <input type="checkbox" name="subject" value="Biology">
+  <label for="Biology">Biology </label><br>
+
+  <input type="checkbox" name="subject" value="Cyber Security">
+  <label for="Cyber Security">Cyber Security </label><br>
+
+  <input type="checkbox" name="subject" value="Machine Learning">
+  <label for="Machine learning">Machine learning </label><br>
+
+  <input type="checkbox" name="subject" value="UAV">
+  <label for="UAV">UAV </label><br>
+
+  <input type="checkbox" name="subject" value="Web Design">
+  <label for="Web Design">Web Design </label><br><br> -->
+  
+  <input type="submit" value="Search" >
+  
+</form>
+
+</body>
+
+<footer>
+<center>
+<img class="logo" src="images/kstatelogo.png" 
+alt="wildcat" 
+width="201" height="auto">
+</center>
+</footer>
+
+</html>
