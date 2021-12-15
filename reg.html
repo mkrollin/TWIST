@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width">
+
+	<title>TWIST: Register</title>
+
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	
+	<script src="script.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="header">
+    <center>
+  <h1>Teen Women in Science and Technology</h1>
+    </center>
+
+<ul>
+<center> 
+<a href='/'><button class="button">Home</button></a>   
+<a href='/reg'><button class="button">Register</button></a> <!-- use / for home and make a name for any other pages after the /-->
+<a href='/geninfo'><button class="button">General Information</button></a>
+<a href='/speakers'><button class="button">Speakers</button></a>
+<a href='/admin'><button class="button">Admin</button></a>
+</center>
+  </div>
+</ul>
+
+<form name="myForm" action="/register" method="POST" >
+<p>Please fill out the following information:</p>
+  <input type="text" name="fname" placeholder="Full Name" required><br>
+  <input type="text" name="address" placeholder="Address" required><br>
+  <input type="email" name="email" placeholder="email" required><br>
+  <input type="text" name="school" placeholder="school" required><br>
+
+  <p>Role:</p>
+  <input type="radio" name="role" value="student" required>
+  <label for="student">Student</label><br>
+  <input type="radio" name="role" value="parent">
+  <label for="parent">Parent</label><br>
+  <input type="radio" name="role" value="counselor">
+  <label for="counselor">Counselor</label><br>
+
+  <p>Please Select Three Topics:</p>
+
+<div class="threetopics">
+
+  <input type="checkbox" name="topics" value="Programming">
+  <label for="Programming">Programming </label><br>
+
+  <input type="checkbox" name="topics" value="Geology">
+  <label for="Geology">Geology </label><br>
+
+  <input type="checkbox" name="topics" value="Math">
+  <label for="Math">Math </label><br>
+
+  <input type="checkbox" name="topics" value="Tech">
+  <label for="Tech">Tech </label><br>
+
+  <input type="checkbox" name="topics" value="Biology">
+  <label for="Biology">Biology </label><br>
+
+  <input type="checkbox" name="topics" value="Cyber Security">
+  <label for="Cyber Security">Cyber Security </label><br>
+
+  <input type="checkbox" name="topics" value="Machine Learning">
+  <label for="Machine learning">Machine learning </label><br>
+
+  <input type="checkbox" name="topics" value="UAV">
+  <label for="UAV">UAV </label><br>
+
+  <input type="checkbox" name="topics" value="Web Design">
+  <label for="Web Design">Web Design </label>
+
+</div>
+
+  <br><br>
+
+  <input class="submit" type="submit" value="Submit" disabled>
+</form>
+    <script>
+
+$('.threetopics :checkbox').change(function () {
+    var $cs = $(this).closest('.threetopics').find(':checkbox:checked');
+    if ($cs.length > 3) {
+        this.checked = false;
+    }
+});
+
+$('.threetopics :checkbox').click(function(){
+    var $cs = $(this).closest('.threetopics').find(':checkbox:checked');
+    if($cs.length < 3){
+    
+        $('.submit').attr("disabled", true);
+
+    } else{
+
+        $('.submit').attr("disabled", false);
+    }
+});
+
+    </script>
+
+</body>
+
+<footer>
+
+<center>
+
+<img class="logo" src="images/kstatelogo.png"
+  alt="wildcat"
+width="201" height="auto">
+
+</center>
+
+</footer>
+
+</html>
